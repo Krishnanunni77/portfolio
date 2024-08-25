@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+    background: #1E1E1E;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Intro Section */
+.intro {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.background-image {
+    position: fixed; /* Ensure the background stays fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image.jpg'); /* Replace with the correct image path */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -2;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+}
+
+.intro img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    margin: 20px 0 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFD700; /* Bright color for better visibility */
+}
+
+.intro p {
+    font-size: 1.4rem;
+    color: #FFD700;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn-resume, .btn-connect {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    background: #FFD700;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-resume:hover, .btn-connect:hover {
+    transform: scale(1.1);
+}
+
+/* Content Section */
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #FFD700;
+}
+
+/* Blog Section */
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align blog posts */
+    gap: 20px; /* Space between blog posts */
+}
+
+.blog-post {
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 45%; /* Adjusts the width of each blog post */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+}
+
+.blog-post img {
+    width: 100%; /* Adjust size of images */
+    max-width: 300px; /* Controls the max size */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.blog-post h3 {
+    color: #FFD700;
+}
+
+.blog-post p {
+    color: #fff;
+}
+
+.blog-post a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.blog-post a:hover img {
+    transform: scale(1.05);
+}
+
+.blog-post a:hover h3 {
+    color: #fff; /* Changes color on hover */
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.3); /* Light background with transparency for readability */
+}
+
+.contact-section img.icon {
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#contact a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #fff;
+}
+
+/* Scroll-triggered Animations */
+.appear {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
